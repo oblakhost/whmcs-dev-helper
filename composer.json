@@ -2,7 +2,7 @@
   "name": "oblak/whmcs-dev-helper",
   "description": "Development utilities for WHMCS modules",
   "type": "composer-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "authors": [
     {

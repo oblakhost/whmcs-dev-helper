@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/oblakhost/whmcs-dev-helper/compare/v1.0.1...v1.0.2) (2023-09-24)
+
+
+### Bug Fixes
+
+* Final tweaks for packer script ([07005f0](https://github.com/oblakhost/whmcs-dev-helper/commit/07005f0733823a2de4ee70a6d89f944243f814a4))
+
 ## [1.0.1](https://github.com/oblakhost/whmcs-dev-helper/compare/v1.0.0...v1.0.1) (2023-09-24)
 
 
