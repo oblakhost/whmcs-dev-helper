@@ -17,7 +17,7 @@ cp scripts/install build/
 
 MODULE_NAME="whmcs-module"
 
-if [[ -n "$CI" ]]; then
+if [[ -z "$CI" ]]; then
   MODULE_NAME="$(basename "$(pwd)")"
 fi
 
