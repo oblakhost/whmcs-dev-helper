@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+find ./modules/ -mindepth 2 -maxdepth 2 -type d | while read -r dir; do
+  if [ -f "$dir/composer.json" ]; then
+    printf "Installing Composer modules for: %s\n" "$(basename "$dir")"
+    composer --working-dir="$dir" install --quiet --no-dev --no-interaction --no-suggest
+  fi
+done

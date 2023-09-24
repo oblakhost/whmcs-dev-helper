@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+rm -rf build && mkdir build
+
+while IFS= read -r MODULE_PATH
+do
+    MODULE_PATH="${MODULE_PATH%%/*}"
+    mkdir -p "build/$MODULE_PATH"
+    cp -ar "$MODULE_PATH/" "build/"
+done < .manifest
+
+cp .manifest build/
+find "$(dirname "$(find build/modules -mindepth 2 -maxdepth 3 -type f -name composer.json)")" -name "composer.*" -type f -exec rm -f {} \;
+
+cp scripts/install build/
+
+MODULE_NAME="$(basename "$(pwd)")"
+
+pushd build
+
+zip -qr "../$MODULE_NAME.zip" .
+
+popd && rm -rf build

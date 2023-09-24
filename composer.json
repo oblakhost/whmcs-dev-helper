@@ -1,0 +1,46 @@
+{
+  "name": "oblak/whmcs-dev-helper",
+  "description": "Development utilities for WHMCS modules",
+  "type": "composer-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sibin Grasic",
+      "email": "sibin.grasic@oblak.host",
+      "homepage": "https://oblak.host",
+      "role": "CTO"
+    },
+    {
+      "name": "Contributors",
+      "homepage": "https://github.com/oblakhost/whmcs-dev-helper/graphs/contributors"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/oblakhost/whmcs-dev-helper/issues",
+    "source": "https://github.com/oblakhost/whmcs-dev-helper"
+  },
+  "bin": [
+    "bin/module-install",
+    "bin/pack"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Oblak\\Composer\\Plugin\\": "src"
+    }
+  },
+  "require": {
+    "php": "^8.0 | ^8.1",
+    "composer-plugin-api": "^2.0"
+  },
+  "require-dev": {
+    "composer/composer": "^2.0",
+    "oblak/whmcs-stubs": "^7.10"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "class": "\\Oblak\\Composer\\Plugin\\WHMCSDevPlugin"
+  },
+  "scripts": {}
+}
