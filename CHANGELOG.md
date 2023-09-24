@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/oblakhost/whmcs-dev-helper/compare/v1.0.0...v1.0.1) (2023-09-24)
+
+
+### Bug Fixes
+
+* Fixed the zip file path on CI env ([145dd05](https://github.com/oblakhost/whmcs-dev-helper/commit/145dd05c89d34d862c3626a5991f846b19eb2bee))
+
 # 1.0.0 (2023-09-24)
 
 
