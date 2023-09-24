@@ -15,10 +15,16 @@ find "$(dirname "$(find build/modules -mindepth 2 -maxdepth 3 -type f -name comp
 
 cp scripts/install build/
 
-MODULE_NAME="$(basename "$(pwd)")"
+MODULE_NAME="whmcs-module"
 
-pushd build
+if [[ -n "$CI" ]]; then
+  MODULE_NAME="$(basename "$(pwd)")"
+fi
+
+pushd build > /dev/null
 
 zip -qr "../$MODULE_NAME.zip" .
 
-popd && rm -rf build
+popd > /dev/null && rm -rf build
+
+printf "Created module file %s.zip\n" "$MODULE_NAME"
